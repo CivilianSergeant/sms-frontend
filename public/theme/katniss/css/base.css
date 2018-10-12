@@ -1,0 +1,897 @@
+/*
+ * Base Styles
+ */
+
+/*	Table of Content
+========================
+	# Base
+	# Typography
+	# Links
+	# Lists
+	# Images
+	# Helper classes
+	# Button
+	# Forms
+	# Dropdowns
+	# Navs
+	# Navbar
+	# Breadcrumbs
+	# Pagination
+	# Labels
+	# Badges
+	# Jumbotron
+	# Page header
+	# Thumbnails
+	# Alerts
+	# Progress bars
+	# Media object
+	# List group
+	# Panels
+	# Wells
+	# Modals
+	# ScrollSpy
+	# Togglable tabs
+	# Tooltips
+	# Collapse
+	# Carousel
+	# Misc
+========================
+*/
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+	html, body {/*height:100%;*/}
+
+	body {
+		position: relative;
+		font: 12px/18px Arial, Helvetica, sans-serif;
+		font-family: 'Lato', sans-serif;
+		font-size: 14px;
+		color: #2C3E50;
+	}
+
+	::-moz-selection {
+		background: #b3d4fc;
+		text-shadow: none;
+	}
+
+	::selection {
+		background: #b3d4fc;
+		text-shadow: none;
+	}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: 'Lato', sans-serif;
+		font-weight: 600;
+		margin: 0;
+		padding: 0;
+		line-height: 1.6;
+	}
+
+	h1 {
+		font-size: 48px;
+	}
+
+	h2 {
+		font-size: 40px;
+	}
+	
+	h3 {
+		font-size: 32px;
+	}
+
+	h4 {
+		font-size: 26px;
+	}
+
+	h5 {
+		font-size: 20px;
+	}
+
+	h6 {
+		font-size: 16px;
+	}
+
+	/*	Blockquotes  */
+	blockquote,
+	blockquote p { 
+		font-size: inherit;
+		color:#1e1e1e;
+		font-style: italic;
+		position: relative;
+	}
+
+	blockquote:before {
+		color: #1e1e1e;
+	}
+
+	blockquote { 
+		margin: 0 0 20px;
+		padding: 20px 20px;
+		border-left: 5px solid inherit;
+		background: #ECF0F1;
+		background: rgba(189, 212, 193, .20);
+	}
+
+	blockquote cite { 
+		display: block; 
+		font-size: 11px; 
+		color: #a9a9a9;
+	}
+
+	blockquote cite:before { 
+		content: "";
+	}
+
+	blockquote cite a,
+	blockquote cite a:visited,
+	blockquote cite a:visited { 
+		color: #555;
+	}
+
+	p {
+	}
+
+	address {
+		font-style: normal;
+	}
+	
+	hr {
+	}
+	code {
+		background-color: #f7f7f7;
+		margin: 0;
+		padding: 0;
+	}
+	
+/* ==========================================================================
+   Links
+   ========================================================================== */
+	a { 
+		color: #000;
+		text-decoration:none; 
+		outline: 0;
+	}
+
+	a:active,
+	a:focus {
+		outline: 0;
+	}
+
+	a:hover {
+		outline: none; 
+		color: #000;
+		text-decoration: none;
+	}
+
+/*  ==========================================================================
+	Lists
+	========================================================================== */
+	ul, ol {
+		margin-bottom: 10px;
+		margin-top: 0;
+	}
+	ul ul, ol ul, ul ol, ol ol {
+		list-style: outside none box;
+		margin-bottom: 0;
+	}
+	.list-unstyled {
+		list-style: outside none box;
+		padding-left: 0;
+	}
+	.list-inline {
+		list-style: outside none none;
+		margin-left: -5px;
+		padding-left: 0;
+	}
+	.list-inline > li {
+		display: inline-block;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	dl {
+		margin-bottom: 20px;
+		margin-top: 0;
+	}
+	dt, dd {
+		line-height: 1.42857;
+	}
+	dt {
+		font-weight: 700;
+	}
+	dd {
+		margin-left: 0;
+	}
+	
+/* 	==========================================================================
+	Images
+	========================================================================== */
+	img {
+		max-width: 100%;
+		height: auto;
+		vertical-align: top;
+	}
+	
+	@media \0screen {
+		img { 
+			width: auto; /* for ie 8 */
+		}
+	}
+	
+	.fullwidth {
+		display:block;
+		min-width:100%;
+		max-width:100%;
+	}
+	
+	img.fullwidth {
+		image-rendering:optimizeQuality;
+		-ms-interpolation-mode:bicubic;
+	}
+	.halfwidth {
+		display:block;
+		max-width:50%;
+	}
+	
+	.alignleft {
+		display: inline;
+		float:left;
+		margin:0 20px 10px 0;
+	}
+
+	.alignright {
+		display: inline;
+		float:right;
+		margin:0 0 10px 30px;
+	}
+	.aligncenter {
+		clear: both;
+		display: block;
+		margin: 0 auto 5px auto;
+	}
+	.alignnone {
+		margin:0 0 10px 0;
+	}
+	.alignleft img,
+	.alignright img,
+	.aligncenter img,
+	.alignnone img {
+		margin: 0;
+	}
+
+/* 	==========================================================================
+	Helper classes
+	========================================================================== */
+
+	/* Image replacement */
+
+	.ir {
+		background-color: transparent;
+		border: 0;
+		overflow: hidden;
+		/* IE 6/7 fallback */
+		*text-indent: -9999px;
+	}
+
+	.ir:before {
+		content: "";
+		display: block;
+		width: 0;
+		height: 150%;
+	}
+
+	/* Hide from both screenreaders and browsers: h5bp.com/u */
+	.hidden {
+		display: none !important;
+		visibility: hidden;
+	}
+
+	/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+	.visuallyhidden {
+		border: 0;
+		clip: rect(0 0 0 0);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		width: 1px;
+	}
+
+	/*
+	 * Extends the .visuallyhidden class to allow the element to be focusable
+	 * when navigated to via the keyboard: h5bp.com/p
+	 */
+	.visuallyhidden.focusable:active,
+	.visuallyhidden.focusable:focus {
+		clip: auto;
+		height: auto;
+		margin: 0;
+		overflow: visible;
+		position: static;
+		width: auto;
+	}
+
+	/* Hide visually and from screenreaders, but maintain layout */
+	.invisible {
+		visibility: hidden;
+	}
+	
+/* 	==========================================================================
+	Button
+	========================================================================== */
+	
+	.btn-default,
+	.btn-primary,
+	.btn-success,
+	.btn-info,
+	.btn-warning,
+	.btn-danger {
+		text-shadow:none;
+		box-shadow: none;
+		border-radius: 0;
+		color: #fff;
+	}
+	.btn-default:active,
+	.btn-primary:active,
+	.btn-success:active,
+	.btn-info:active,
+	.btn-warning:active,
+	.btn-danger:active,
+	.btn-default.active,
+	.btn-primary.active,
+	.btn-success.active,
+	.btn-info.active,
+	.btn-warning.active,
+	.btn-danger.active {
+		box-shadow: none;
+	}
+	.btn:active,
+	.btn.active {
+		background-image: none;
+	}
+	.btn-default {
+		text-shadow: none;
+		background: #3498db;
+		border-color: #2980b9;
+	}
+	.btn-default:hover,
+	.btn-default:focus {
+		background-color: #e0e0e0;
+		background-position: 0 -15px;
+	}
+	.btn-default:active,
+	.btn-default.active {
+		background-color: #e0e0e0;
+		border-color: #dbdbdb;
+	}
+	.btn-default:disabled,
+	.btn-default[disabled] {
+		background-color: #e0e0e0;
+		background-image: none;
+	}
+	.btn-primary {
+		background-repeat: repeat-x;
+		border-color: #2b669a;
+	}
+	.btn-primary:hover,
+	.btn-primary:focus {
+		background-color: #2d6ca2;
+		background-position: 0 -15px;
+	}
+	.btn-primary:active,
+	.btn-primary.active {
+		background-color: #2d6ca2;
+		border-color: #2b669a;
+	}
+	.btn-primary:disabled,
+	.btn-primary[disabled] {
+		background-color: #2d6ca2;
+		background-image: none;
+	}
+	.btn-success {
+		border-color: #3e8f3e;
+	}
+	.btn-success:hover,
+	.btn-success:focus {
+		background-color: #419641;
+		background-position: 0 -15px;
+	}
+	.btn-success:active,
+	.btn-success.active {
+	  background-color: #419641;
+	  border-color: #3e8f3e;
+	}
+	.btn-success:disabled,
+	.btn-success[disabled] {
+		background-color: #419641;
+		background-image: none;
+	}
+	.btn-info {
+		border-color: #28a4c9;
+	}
+	.btn-info:hover,
+	.btn-info:focus {
+		background-color: #2aabd2;
+		background-position: 0 -15px;
+	}
+	.btn-info:active,
+	.btn-info.active {
+		background-color: #2aabd2;
+		border-color: #28a4c9;
+	}
+	.btn-info:disabled,
+	.btn-info[disabled] {
+		background-color: #2aabd2;
+		background-image: none;
+	}
+	.btn-warning {
+		border-color: #e38d13;
+	}
+	.btn-warning:hover,
+	.btn-warning:focus {
+		background-color: #eb9316;
+		background-position: 0 -15px;
+	}
+	.btn-warning:active,
+	.btn-warning.active {
+		background-color: #eb9316;
+		border-color: #e38d13;
+	}
+	.btn-warning:disabled,
+	.btn-warning[disabled] {
+		background-color: #eb9316;
+		background-image: none;
+	}
+	.btn-danger {
+		border-color: #b92c28;
+	}
+	.btn-danger:hover,
+	.btn-danger:focus {
+		background-color: #c12e2a;
+		background-position: 0 -15px;
+	}
+	.btn-danger:active,
+	.btn-danger.active {
+		background-color: #c12e2a;
+		border-color: #b92c28;
+	}
+	.btn-danger:disabled,
+	.btn-danger[disabled] {
+		background-color: #c12e2a;
+		background-image: none;
+	}
+
+/* 	==========================================================================
+	Forms
+	========================================================================== */
+	.form-control {
+		border-radius: 3px;
+	}
+	
+/* 	==========================================================================
+	Helper classes
+	========================================================================== */
+	.bg-primary{}
+	.bg-success{}
+	.bg-info{}
+	.bg-warning{}
+	.bg-danger{}
+
+/* 	==========================================================================
+	Dropdowns
+	========================================================================== */
+	.dropdown-menu {
+		background-color: #fff;
+		border: 1px solid #e6e6e6;
+		border-radius: 0;
+		margin: 0;
+		padding: 0;
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.176);
+	}
+		.dropdown-menu > li > a {
+			padding: 7px 13px;
+		}
+		.dropdown-menu > li > a:hover,
+		.dropdown-menu > li > a:focus {
+			background-color: #e8e8e8;
+		}
+		.dropdown-menu > .active > a,
+		.dropdown-menu > .active > a:hover,
+		.dropdown-menu > .active > a:focus {
+			background: none;
+		}
+
+/* 	==========================================================================
+	Navs
+	========================================================================== */
+	
+/* 	==========================================================================
+	Navbar
+	========================================================================== */
+	.navbar-default {
+		background: none;
+		background: #262B2F;
+		border-radius: 0;
+		box-shadow: none;
+	}
+	.navbar-default .navbar-nav > .active > a {
+		background: none;
+		background: #2c3e50;
+		box-shadow: none;
+	}
+	.navbar-brand,
+	.navbar-nav > li > a {
+		text-shadow: none;
+	}
+	.navbar-inverse {
+		background: none;
+		background: #2C3E50;
+		border: none;
+		box-shadow: none;
+	}
+	.navbar-inverse .navbar-nav > .active > a {
+		background: none;
+	}
+	.navbar-inverse .navbar-brand,
+	.navbar-inverse .navbar-nav > li > a {
+		text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
+	}
+	.navbar-static-top,
+	.navbar-fixed-top,
+	.navbar-fixed-bottom {
+	  border-radius: 0;
+	}
+/* 	==========================================================================
+	Breadcrumbs
+	========================================================================== */
+
+/* 	==========================================================================
+	Pagination
+	========================================================================== */
+	
+/* 	==========================================================================
+	Labels
+	========================================================================== */
+	
+/* 	==========================================================================
+	Badges
+	========================================================================== */
+	
+/* 	==========================================================================
+	Jumbotron
+	========================================================================== */
+	
+/* 	==========================================================================
+	Page header
+	========================================================================== */
+	
+/* 	==========================================================================
+	Thumbnails
+	========================================================================== */
+	
+/* 	==========================================================================
+	Alerts
+	========================================================================== */
+	
+	.alert {
+		text-shadow: 0 1px 0 rgba(255, 255, 255, .2);
+		-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .25), 0 1px 2px rgba(0, 0, 0, .05);
+			  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .25), 0 1px 2px rgba(0, 0, 0, .05);
+	}
+	.alert-success {
+	
+	}
+	.alert-info {
+	
+	}
+	.alert-warning {
+	
+	}
+	.alert-danger {
+
+	}
+/* 	==========================================================================
+	Progress bars
+	========================================================================== */
+	
+	.progress {
+		background-image: -webkit-linear-gradient(top, #ebebeb 0%, #f5f5f5 100%);
+		background-image:      -o-linear-gradient(top, #ebebeb 0%, #f5f5f5 100%);
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#ebebeb), to(#f5f5f5));
+		background-image:         linear-gradient(to bottom, #ebebeb 0%, #f5f5f5 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffebebeb', endColorstr='#fff5f5f5', GradientType=0);
+		background-repeat: repeat-x;
+	}
+	.progress-bar {
+		background-image: -webkit-linear-gradient(top, #428bca 0%, #3071a9 100%);
+		background-image:      -o-linear-gradient(top, #428bca 0%, #3071a9 100%);
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#428bca), to(#3071a9));
+		background-image:         linear-gradient(to bottom, #428bca 0%, #3071a9 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff428bca', endColorstr='#ff3071a9', GradientType=0);
+		background-repeat: repeat-x;
+	}
+	.progress-bar-success {
+		background-image: -webkit-linear-gradient(top, #5cb85c 0%, #449d44 100%);
+		background-image:      -o-linear-gradient(top, #5cb85c 0%, #449d44 100%);
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#5cb85c), to(#449d44));
+		background-image:         linear-gradient(to bottom, #5cb85c 0%, #449d44 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5cb85c', endColorstr='#ff449d44', GradientType=0);
+		background-repeat: repeat-x;
+	}
+	.progress-bar-info {
+		background-image: -webkit-linear-gradient(top, #5bc0de 0%, #31b0d5 100%);
+		background-image:      -o-linear-gradient(top, #5bc0de 0%, #31b0d5 100%);
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#5bc0de), to(#31b0d5));
+		background-image:         linear-gradient(to bottom, #5bc0de 0%, #31b0d5 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5bc0de', endColorstr='#ff31b0d5', GradientType=0);
+		background-repeat: repeat-x;
+	}
+	.progress-bar-warning {
+		background-image: -webkit-linear-gradient(top, #f0ad4e 0%, #ec971f 100%);
+		background-image:      -o-linear-gradient(top, #f0ad4e 0%, #ec971f 100%);
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#f0ad4e), to(#ec971f));
+		background-image:         linear-gradient(to bottom, #f0ad4e 0%, #ec971f 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff0ad4e', endColorstr='#ffec971f', GradientType=0);
+		background-repeat: repeat-x;
+	}
+	.progress-bar-danger {
+		background-image: -webkit-linear-gradient(top, #d9534f 0%, #c9302c 100%);
+		background-image:      -o-linear-gradient(top, #d9534f 0%, #c9302c 100%);
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#d9534f), to(#c9302c));
+		background-image:         linear-gradient(to bottom, #d9534f 0%, #c9302c 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd9534f', endColorstr='#ffc9302c', GradientType=0);
+		background-repeat: repeat-x;
+	}
+	.progress-bar-striped {
+		background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+		background-image:      -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+		background-image:         linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+	}
+/* 	==========================================================================
+	Media object
+	========================================================================== */
+	
+/* 	==========================================================================
+	List group
+	========================================================================== */
+	.list-group {
+		border-radius: 4px;
+		-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
+			  box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
+	}
+	.list-group-item.active,
+	.list-group-item.active:hover,
+	.list-group-item.active:focus {
+		text-shadow: 0 -1px 0 #3071a9;
+		background-image: -webkit-linear-gradient(top, #428bca 0%, #3278b3 100%);
+		background-image:      -o-linear-gradient(top, #428bca 0%, #3278b3 100%);
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#428bca), to(#3278b3));
+		background-image:         linear-gradient(to bottom, #428bca 0%, #3278b3 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff428bca', endColorstr='#ff3278b3', GradientType=0);
+		background-repeat: repeat-x;
+		border-color: #3278b3;
+	}
+	
+/* 	==========================================================================
+	Panels
+	========================================================================== */
+	
+	.panel {
+		-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+			  box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+	}
+	.panel-default > .panel-heading {
+		background-image: -webkit-linear-gradient(top, #f5f5f5 0%, #e8e8e8 100%);
+		background-image:      -o-linear-gradient(top, #f5f5f5 0%, #e8e8e8 100%);
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#e8e8e8));
+		background-image:         linear-gradient(to bottom, #f5f5f5 0%, #e8e8e8 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', endColorstr='#ffe8e8e8', GradientType=0);
+		background-repeat: repeat-x;
+	}
+	.panel-primary > .panel-heading {
+		background-image: -webkit-linear-gradient(top, #428bca 0%, #357ebd 100%);
+		background-image:      -o-linear-gradient(top, #428bca 0%, #357ebd 100%);
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#428bca), to(#357ebd));
+		background-image:         linear-gradient(to bottom, #428bca 0%, #357ebd 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff428bca', endColorstr='#ff357ebd', GradientType=0);
+		background-repeat: repeat-x;
+	}
+	.panel-success > .panel-heading {
+		background-image: -webkit-linear-gradient(top, #dff0d8 0%, #d0e9c6 100%);
+		background-image:      -o-linear-gradient(top, #dff0d8 0%, #d0e9c6 100%);
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#dff0d8), to(#d0e9c6));
+		background-image:         linear-gradient(to bottom, #dff0d8 0%, #d0e9c6 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffdff0d8', endColorstr='#ffd0e9c6', GradientType=0);
+		background-repeat: repeat-x;
+	}
+	.panel-info > .panel-heading {
+		background-image: -webkit-linear-gradient(top, #d9edf7 0%, #c4e3f3 100%);
+		background-image:      -o-linear-gradient(top, #d9edf7 0%, #c4e3f3 100%);
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#d9edf7), to(#c4e3f3));
+		background-image:         linear-gradient(to bottom, #d9edf7 0%, #c4e3f3 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd9edf7', endColorstr='#ffc4e3f3', GradientType=0);
+		background-repeat: repeat-x;
+	}
+	.panel-warning > .panel-heading {
+		background-image: -webkit-linear-gradient(top, #fcf8e3 0%, #faf2cc 100%);
+		background-image:      -o-linear-gradient(top, #fcf8e3 0%, #faf2cc 100%);
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#fcf8e3), to(#faf2cc));
+		background-image:         linear-gradient(to bottom, #fcf8e3 0%, #faf2cc 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcf8e3', endColorstr='#fffaf2cc', GradientType=0);
+		background-repeat: repeat-x;
+	}
+	.panel-danger > .panel-heading {
+		background-image: -webkit-linear-gradient(top, #f2dede 0%, #ebcccc 100%);
+		background-image:      -o-linear-gradient(top, #f2dede 0%, #ebcccc 100%);
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#f2dede), to(#ebcccc));
+		background-image:         linear-gradient(to bottom, #f2dede 0%, #ebcccc 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff2dede', endColorstr='#ffebcccc', GradientType=0);
+		background-repeat: repeat-x;
+	}
+/* 	==========================================================================
+	Wells
+	========================================================================== */
+	
+	.well {
+		background-image: -webkit-linear-gradient(top, #e8e8e8 0%, #f5f5f5 100%);
+		background-image:      -o-linear-gradient(top, #e8e8e8 0%, #f5f5f5 100%);
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#e8e8e8), to(#f5f5f5));
+		background-image:         linear-gradient(to bottom, #e8e8e8 0%, #f5f5f5 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe8e8e8', endColorstr='#fff5f5f5', GradientType=0);
+		background-repeat: repeat-x;
+		border-color: #dcdcdc;
+		box-shadow: none;
+	}
+/* 	==========================================================================
+	Modals
+	========================================================================== */
+	
+/* 	==========================================================================
+	ScrollSpy
+	========================================================================== */
+
+/* 	==========================================================================
+	Togglable tabs
+	========================================================================== */
+	
+/* 	==========================================================================
+	Tooltips
+	========================================================================== */
+	
+/* 	==========================================================================
+	Collapse
+	========================================================================== */
+	
+/* 	==========================================================================
+	Carousel
+	========================================================================== */
+	
+/* 	==========================================================================
+	Misc
+	========================================================================== */
+
+	/* Remove the gap between images, videos, audio and canvas */
+	audio,
+	canvas,
+	img,
+	video {
+		vertical-align: middle;
+	}
+
+	/* Remove default fieldset styles. */
+	fieldset {
+		border: 0;
+		margin: 0;
+		padding: 0;
+	}
+
+	/* Allow only vertical resizing of textareas. */
+	textarea {
+		resize: vertical;
+	}
+	
+	/* Browse Happy prompt */
+	.browsehappy {
+		margin: 0.2em 0;
+		background: #ccc;
+		color: #000;
+		padding: 0.2em 0;
+	}   
+   
+/* 	==========================================================================
+	EXAMPLE Media Queries for Responsive Design.
+	These examples override the primary ('mobile first') styles.
+	Modify as content requires.
+	========================================================================== */
+
+	@media only screen and (min-width: 35em) {
+		/* Style adjustments for viewports that meet the condition */
+	}
+
+	@media print,
+		   (-o-min-device-pixel-ratio: 5/4),
+		   (-webkit-min-device-pixel-ratio: 1.25),
+		   (min-resolution: 120dpi) {
+		/* Style adjustments for high resolution devices */
+	}
+
+/* 	==========================================================================
+	Print styles.
+	Inlined to avoid required HTTP connection: h5bp.com/r
+	========================================================================== */
+	@media print {
+		* {
+			background: transparent !important;
+			color: #000 !important; /* Black prints faster: h5bp.com/s */
+			box-shadow: none !important;
+			text-shadow: none !important;
+		}
+
+		a,
+		a:visited {
+			text-decoration: underline;
+		}
+
+		a[href]:after {
+			content: " (" attr(href) ")";
+		}
+
+		abbr[title]:after {
+			content: " (" attr(title) ")";
+		}
+
+		/*
+		 * Don't show links for images, or javascript/internal links
+		 */
+
+		.ir a:after,
+		a[href^="javascript:"]:after,
+		a[href^="#"]:after {
+			content: "";
+		}
+
+		pre,
+		blockquote {
+			border: 1px solid #999;
+			page-break-inside: avoid;
+		}
+
+		thead {
+			display: table-header-group; /* h5bp.com/t */
+		}
+
+		tr,
+		img {
+			page-break-inside: avoid;
+		}
+
+		img {
+			max-width: 100% !important;
+		}
+
+		@page {
+			margin: 0.5cm;
+		}
+
+		p,
+		h2,
+		h3 {
+			orphans: 3;
+			widows: 3;
+		}
+
+		h2,
+		h3 {
+			page-break-after: avoid;
+		}
+	}
+
+ 
+ 

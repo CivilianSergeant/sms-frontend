@@ -1,0 +1,67 @@
+/*
+Theme Name: Twenty Fourteen
+Description: Used to style the TinyMCE editor.
+*/
+
+/*
+ * Fonts
+ */
+
+/* ==========================================================================
+   All Fonts Imported here
+   ========================================================================== */
+   @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
+   @import url(http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic);
+   @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,100italic,300italic,400italic,500,500italic,700,700italic,900,900italic);
+   @import url(http://fonts.googleapis.com/css?family=Josefin+Slab:400,100,100italic,300,300italic,400italic,600italic,600,700,700italic);
+   @import url(http://fonts.googleapis.com/css?family=Arvo:400,400italic,700italic,700);
+   @import url(http://fonts.googleapis.com/css?family=Vollkorn:400,400italic,700,700italic);
+   @import url(http://fonts.googleapis.com/css?family=Abril+Fatface);
+   @import url(http://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic);
+   @import url(http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic);
+   @import url(http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic);
+   @import url(http://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700);
+   @import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+   @import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
+   @import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900);
+   @import url(http://fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800);
+	body{
+		font-family: 'Open Sans', sans-serif;
+		font-family: 'Lato', sans-serif;
+		/*font-family: 'Roboto', sans-serif;
+		/*font-family: 'Josefin Slab', serif;
+		/*font-family: 'Arvo', serif;
+		/*font-family: 'Vollkorn', serif;
+		/*font-family: 'Abril Fatface', cursive;
+		/*font-family: 'Ubuntu', sans-serif;
+		/*font-family: 'PT Sans', sans-serif;
+		/*font-family: 'PT Serif', serif;
+		/*font-family: 'Old Standard TT', serif;
+		/*font-family: 'Droid Sans', sans-serif;
+		/*font-family: 'Oswald', sans-serif;
+		/*font-family: 'Titillium Web', sans-serif;*/
+		/*font-family: 'Dosis', sans-serif;*/
+	}
+	
+	@font-face {
+		font-family: 'ChunkFiveRegular';
+		src: url('Chunkfive-webfont.eot');
+		src: url('Chunkfive-webfont.eot?#iefix') format('embedded-opentype'),
+		url('Chunkfive-webfont.woff') format('woff'),
+		url('Chunkfive-webfont.ttf') format('truetype'),
+		url('Chunkfive-webfont.svg#ChunkFiveRegular') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+	
+	@font-face {
+	font-family: 'junction_regularregular';
+	src: url('../fonts/junction-webfont.eot');
+	src: url('../fonts/junction-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/junction-webfont.woff2') format('woff2'),
+		 url('../fonts/junction-webfont.woff') format('woff'),
+		 url('../fonts/junction-webfont.ttf') format('truetype'),
+		 url('../fonts/junction-webfont.svg#junction_regularregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	}
